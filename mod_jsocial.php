@@ -24,8 +24,8 @@ $tabsheight=0;
 $bodywidth  =   $options['width'];
 $bodyheight =   $options['height'] - $tabsheight;
 
-echo '
-    <script type="application/javascript" src="modules/mod_jsocial/assests/mootabs.js" />
+echo '<script src="https://ajax.googleapis.com/ajax/libs/mootools/1.6.0/mootools.min.js"></script>
+    <script type="application/javascript" src="modules/mod_jsocial/assests/mootabs.js"></script>
     <ul id = "tabs">';
 if($vkid)   { echo '<li id = "VkM">VK.com</li>';}
 if($okid)   { echo '<li id = "OkM">OK.ru</li>';}
