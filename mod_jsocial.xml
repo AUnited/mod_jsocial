@@ -29,7 +29,7 @@
 			<field name="width" type="integer" first="0" last="2048" step="20" default="300" label="MOD_JSOCIAL_WIDTH" description="MOD_JSOCIAL_WIDTH_DESC" />
 			<field name="height" type="integer" first="0" last="2048" step="20" default="300" label="MOD_JSOCIAL_HEIGHT" description="MOD_JSOCIAL_HEIGHT_DESC" />
 		</fieldset>
-		<fieldset name="JGLOBAL_MOD_JSOCIAL_VK">
+		<fieldset name="JGLOBAL_FIELDSET_MOD_JSOCIAL_VK">
 			<field name="vkid" type="text" default="" label="MOD_JSOCIAL_VKID" description="MOD_JSOCIAL_VKID_DESC" />
 			<field name="vkmode" type="list" default="" label="MOD_JSOCIAL_VKMODE" description="MOD_JSOCIAL_VKMODE_DESC">
 			<option value="3">MOD_JSOCIAL_MEMBERS</option>
@@ -42,10 +42,10 @@
 			<field name="textcolor" type="color" default="#000000" label="MOD_JSOCIAL_VK_TEXTCOLOR" description="MOD_JSOCIAL_VK_TEXTCOLOR_DESC" />
 			<field name="btncolor" type="color" default="#6181b8" label="MOD_JSOCIAL_VK_BTNCOLOR" description="MOD_JSOCIAL_VK_BTNCOLOR_DESC" />
 	</fieldset>
-		<fieldset name="JGLOBAL_MOD_JSOCIAL_OK">
+		<fieldset name="JGLOBAL_FIELDSET_MOD_JSOCIAL_OK">
 			<field name="okid" type="text" default="" label="MOD_JSOCIAL_OKID" description="MOD_JSOCIAL_OKID_DESC" />
 		</fieldset>
-		<fieldset name="JGLOBAL_MOD_JSOCIAL_FB">
+		<fieldset name="JGLOBAL_FIELDSET_MOD_JSOCIAL_FB">
 			<field name="fbid" type="text" default="" label="MOD_JSOCIAL_FBID" description="MOD_JSOCIAL_FBID_DESC" />
 			<field name="fbtext" type="text" default="" label="MOD_JSOCIAL_FB_TEXT" description="MOD_JSOCIAL_FB_TEXT_DESC" />
 			<field name="tabs" type="list" default="0" label="MOD_JSOCIAL_FB_TABS" description="MOD_JAPLAYER_FB_TABS_DESC" >
