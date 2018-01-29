@@ -47,11 +47,11 @@ function vkid($vkid, $width, $height)
     $mode   =   $moduleParams->get('vkmode', 3);
     $wide   =   $moduleParams->get('vkwide', 0);
     $nocover   =   $moduleParams->get('vknocover', 1);
-    $bgcolor    =   $moduleParams->get('bgcolor', 'CCCCCC');
+    $bgcolor    =   $moduleParams->get('bgcolor', '#ffffff');
     $bgcolor    =   colorNormalise ($bgcolor,'up', 0);
-    $textcolor  =   $moduleParams->get('textcolor', 'CCCCCC');
+    $textcolor  =   $moduleParams->get('textcolor', '#000000');
     $textcolor  =   colorNormalise ($textcolor,'up', 0);
-    $btncolor   =   $moduleParams->get('btncolor', '#cccccc');
+    $btncolor   =   $moduleParams->get('btncolor', '#6181b8');
     $btncolor   =   colorNormalise ($btncolor,'up', 0);
     return '<div id="vk_groups"></div>
     <script type="text/javascript">
