@@ -15,7 +15,7 @@ var showFunction = function() {
         'background-color': '#d3715c',
         'font-size': '31px'
     });
-}
+};
 
 window.addEvent('domready', function() {
     var elOneM = $('contentoneM');
