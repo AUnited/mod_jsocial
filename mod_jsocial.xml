@@ -46,30 +46,29 @@
 			<field name="okid" type="text" default="" label="MOD_JSOCIAL_OKID" description="MOD_JSOCIAL_OKID_DESC" />
 		</fieldset>
 		<fieldset name="JGLOBAL_MOD_JSOCIAL_FB">
-			<field name="tabs" type="list" default="0" class="btn-group btn-group-yesno" label="MOD_JAPLAYER_NARROW" description="MOD_JAPLAYER_NARROW_DESC" >
+			<field name="tabs" type="list" default="0" label="MOD_JAPLAYER_NARROW" description="MOD_JAPLAYER_NARROW_DESC" >
 				<option value="timeline">Timeline</option>
 				<option value="events">Events</option>
 				<option value="messages">Messages</option>
 			</field>
 			<field name="fbid" type="text" default="" label="MOD_JSOCIAL_FBID" description="MOD_JSOCIAL_FBID_DESC" />
-			<field name="tabs" type="timeline" default="" label="MOD_JSOCIAL_VKID" description="MOD_JSOCIAL_VKID_DESC" />
-			<field name="hide_cover" type="radio" default="0" label="MOD_JSOCIAL_VKID" description="MOD_JSOCIAL_VKID_DESC">
+			<field name="hide_cover" type="radio" default="0" class="btn-group btn-group-yesno" label="MOD_JSOCIAL_VKID" description="MOD_JSOCIAL_VKID_DESC">
 			<option value="1">JYES</option>
 			<option value="0">JNO</option>
 			</field>
-			<field name="show_facepile" type="radio" default="1" label="MOD_JSOCIAL_TID" description="MOD_JSOCIAL_TID_DESC">
+			<field name="show_facepile" type="radio" default="1" class="btn-group btn-group-yesno" label="MOD_JSOCIAL_TID" description="MOD_JSOCIAL_TID_DESC">
 				<option value="1">JYES</option>
 				<option value="0">JNO</option>
 			</field>
-			<field name="hide_cta" type="radio" default="0" label="MOD_JSOCIAL_OKID" description="MOD_JSOCIAL_OKID_DESC">
+			<field name="hide_cta" type="radio" default="0" class="btn-group btn-group-yesno" label="MOD_JSOCIAL_OKID" description="MOD_JSOCIAL_OKID_DESC">
 				<option value="1">JYES</option>
 				<option value="0">JNO</option>
 			</field>
-			<field name="small_header" type="radio" default="0" label="MOD_JSOCIAL_OKID" description="MOD_JSOCIAL_OKID_DESC">
+			<field name="small_header" type="radio" default="0" class="btn-group btn-group-yesno" label="MOD_JSOCIAL_OKID" description="MOD_JSOCIAL_OKID_DESC">
 				<option value="1">JYES</option>
 				<option value="0">JNO</option>
 			</field>
-			<field name="adapt_container_width" type="radio" default="0" label="MOD_JSOCIAL_OKID" description="MOD_JSOCIAL_OKID_DESC">
+			<field name="adapt_container_width" type="radio" default="0" class="btn-group btn-group-yesno" label="MOD_JSOCIAL_OKID" description="MOD_JSOCIAL_OKID_DESC">
 				<option value="1">JYES</option>
 				<option value="0">JNO</option>
 			</field>
