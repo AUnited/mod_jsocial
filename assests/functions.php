@@ -100,7 +100,7 @@ return '<div id="ok_group_widget"></div>
 
 }
 
-function tid($tid, $width)
+function tid($tid, $width, $height)
 {
     $module = JModuleHelper::getModule('mod_jsocial');
     $moduleParams = new JRegistry($module->params);
