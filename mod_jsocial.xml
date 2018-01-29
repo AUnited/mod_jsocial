@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE extension PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://help.aunited.ru/dtd/joomla/3.0/module-install.dtd">
 <extension type="module" version="3.0" method="upgrade">
-<name>MOD_JSocial</name>
+<name>MOD_JSOCIAL</name>
 <author>Vitaliy Zhukov</author>
 <creationDate>January 2018</creationDate>
 <authorEmail>info@aunited.ru</authorEmail>
@@ -13,8 +13,8 @@
 <files>
 	<folder>language</folder>
 	<folder>assests</folder>
-	<filename module="mod_japlayer">mod_jsocial.php</filename>
-	<filename module="mod_japlayer">mod_jsocial.xml</filename>
+	<filename module="mod_jsocial">mod_jsocial.php</filename>
+	<filename module="mod_jsocial">mod_jsocial.xml</filename>
 	<filename>index.html</filename>
 </files>
 	<languages folder="language">
