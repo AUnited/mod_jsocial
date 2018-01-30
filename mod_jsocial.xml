@@ -55,7 +55,11 @@
 		<fieldset name="MOD_JSOCIAL_FB">
 			<field name="fbid" type="text" default="" label="MOD_JSOCIAL_FBID" description="MOD_JSOCIAL_FBID_DESC" />
 			<field name="fbtitle" type="text" default="" label="MOD_JSOCIAL_FB_TITLE" description="MOD_JSOCIAL_FB_TITLE_DESC" />
-			<field name="tabs" type="list" default="0" label="MOD_JSOCIAL_FB_TABS" description="MOD_JAPLAYER_FB_TABS_DESC" >
+			<field name="langd" type="radio" default="1" class="btn-group btn-group-yesno" label="MOD_JSOCIAL_FB_LANGD" description="MOD_JSOCIAL_FB_LANGD_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="tabs" type="list" default="0" label="MOD_JSOCIAL_FB_TABS" description="MOD_JSOCIAL_FB_TABS_DESC" >
 				<option value="timeline">MOD_JSOCIAL_TIMELINE</option>
 				<option value="events">MOD_JSOCIAL_EVENTS</option>
 				<option value="messages">MOD_JSOCIAL_MESSAGES</option>
