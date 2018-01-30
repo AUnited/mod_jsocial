@@ -19,23 +19,68 @@ $vkid   =   $moduleParams->get('vkid', '');
 $okid   =   $moduleParams->get('okid', '');
 $fbid   =   $moduleParams->get('fbid', '');
 $tid   =   $moduleParams->get('tid', '');
+$tabengine   =   $moduleParams->get('tabengine', 1);
 $fbtitle   =   $moduleParams->get('fbtitle', 'Facebook');
 $tabsheight=0;
 $bodywidth  =   $options['width'];
 $bodyheight =   $options['height'] - $tabsheight;
+if($tabengine){
+ echo '<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+    $( function() {
+        $( "#tabs" ).tabs();
+    } );
+  </script>
+</head>
+<body>
+ 
+<div id="tabs">
+  <ul>';
+    $count=0;
+    if ($vkid) {echo '<li><a href="#tabs-1">VK.com</a></li>'; }
+    if ($okid) {echo '<li><a href="#tabs-2">OK.ru</a></li>';}
+    if ($fbid) {echo '<li><a href="#tabs-3">Facebook</a></li>';}
+    if ($tid)  {echo '<li><a href="#tabs-4">Twitter</a></li>';}
 
-echo '<script src="https://ajax.googleapis.com/ajax/libs/mootools/1.6.0/mootools.min.js"></script>
+    echo'</ul>';
+    if ($vkid) {echo '<div id="tabs-1">' . vkinit() . vkid($vkid, $bodywidth, $bodyheight) . '</div>'; }
+    if ($vkid) {echo '<div id="tabs-2">' . okid($okid, $bodywidth, $bodyheight) . '</div>'; }
+    if ($vkid) {echo '<div id="tabs-3">' . fbinit() . fbid($fbid, $fbtitle, $bodywidth, $bodyheight) . '</div>'; }
+    if ($vkid) {echo '<div id="tabs-4">' . tinit() . tid($fbid, $bodywidth, $bodyheight) . '</div>'; }
+echo '</div>';
+} else {
+    echo '<script src="https://ajax.googleapis.com/ajax/libs/mootools/1.6.0/mootools.min.js"></script>
     <script type="application/javascript" src="modules/mod_jsocial/assests/mootabs.js"></script>
     <ul id = "tabs">';
-if($vkid)   { echo '<li id = "VkM">VK.com</li>';}
-if($okid)   { echo '<li id = "OkM">OK.ru</li>';}
-if($fbid)   { echo '<li id = "FbM">Facebook</li>';}
-if($tid)    { echo '<li id = "TwM">Twitter</li>';}
-echo' </ul>';
+    if ($vkid) {
+        echo '<li id = "VkM">VK.com</li>';
+    }
+    if ($okid) {
+        echo '<li id = "OkM">OK.ru</li>';
+    }
+    if ($fbid) {
+        echo '<li id = "FbM">Facebook</li>';
+    }
+    if ($tid) {
+        echo '<li id = "TwM">Twitter</li>';
+    }
+    echo ' </ul>';
 
 #and here are our content divs
-if($vkid)   { echo '<div id = "contentoneM" class = "hiddenM">'.vkinit().vkid($vkid, $bodywidth, $bodyheight).'</div>';}
-if($okid)   { echo '<div id = "contenttwoM" class = "hiddenM">'.okid($okid, $bodywidth, $bodyheight).'</div>';}
-if($fbid)   { echo '<div id = "contentthreeM" class = "hiddenM">'.fbinit().fbid($fbid,$fbtitle, $bodywidth, $bodyheight).'</div>';}
-if($tid)    { echo '<div id = "contentfourM" class = "hiddenM">'.tinit().tid($fbid, $bodywidth, $bodyheight).'</div>';}
+    if ($vkid) {
+        echo '<div id = "contentoneM" class = "hiddenM">' . vkinit() . vkid($vkid, $bodywidth, $bodyheight) . '</div>';
+    }
+    if ($okid) {
+        echo '<div id = "contenttwoM" class = "hiddenM">' . okid($okid, $bodywidth, $bodyheight) . '</div>';
+    }
+    if ($fbid) {
+        echo '<div id = "contentthreeM" class = "hiddenM">' . fbinit() . fbid($fbid, $fbtitle, $bodywidth, $bodyheight) . '</div>';
+    }
+    if ($tid) {
+        echo '<div id = "contentfourM" class = "hiddenM">' . tinit() . tid($fbid, $bodywidth, $bodyheight) . '</div>';
+    }
+}
+
 

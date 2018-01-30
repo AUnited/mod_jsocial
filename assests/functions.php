@@ -36,12 +36,11 @@ function fbinit()
     $jlang = $SiteLang->getName();
     if($detect) {$lang=$jlang;} else {$lang="en_GB";}
     return'<div id="fb-root"></div>
-        <div>'.$lang.'</div>
         <script>(function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
             js = d.createElement(s); js.id = id;
-            js.src = \'https://connect.facebook.net/'.$jlang.'/sdk.js#xfbml=1&version=v2.11\';
+            js.src = \'https://connect.facebook.net/'.$lang.'/sdk.js#xfbml=1&version=v2.11\';
             fjs.parentNode.insertBefore(js, fjs);
             }(document, \'script\', \'facebook-jssdk\'));</script>';
 }
@@ -75,13 +74,20 @@ function fbid($fbid, $fbtext, $width, $height)
 {
     $module = JModuleHelper::getModule('mod_jsocial');
     $moduleParams = new JRegistry($module->params);
+    $mode   =   $moduleParams->get('fbmode', 0);
     $tabs   =   $moduleParams->get('tabs', 'timeline');
     $hide_cover   =   $moduleParams->get('hide_cover', 0);
     $show_facepile   =   $moduleParams->get('show_facepile', 1);
     $hide_cta    =   $moduleParams->get('hide_cta', 0);
     $small_header   =   $moduleParams->get('small_header', 0);
     $adapt_container_width  =   $moduleParams->get('adapt_container_width', 0);
-    return '<div class="fb-page" data-href="'.$fbid.'" data-tabs="'.$tabs.'" data-width="'.$width.'" data-height="'.$height.'" data-hide-cta="'.numToTF($hide_cta).'" data-small-header="'.NumToTF($small_header).'" data-adapt-container-width="'.NumToTF($adapt_container_width).'" data-hide-cover="'.NumToTF($hide_cover).'" data-show-facepile="'.NumToTF($show_facepile).'"><blockquote cite="'.$fbid.'" class="fb-xfbml-parse-ignore"><a href="'.$fbid.'">'.$fbtext.'</a></blockquote></div>';
+    if ($mode) {
+        return '<div class="fb-page" data-href="'.$fbid.'" data-tabs="'.$tabs.'" data-width="'.$width.'" data-height="'.$height.'" data-hide-cta="'.numToTF($hide_cta).'" data-small-header="'.NumToTF($small_header).'" data-adapt-container-width="'.NumToTF($adapt_container_width).'" data-hide-cover="'.NumToTF($hide_cover).'" data-show-facepile="'.NumToTF($show_facepile).'"><blockquote cite="'.$fbid.'" class="fb-xfbml-parse-ignore"><a href="'.$fbid.'">'.$fbtext.'</a></blockquote></div>';
+    }
+    else
+    {
+        return '<iframe src="https://www.facebook.com/plugins/page.php?href='.$fbid.'&tabs='.$tabs.'&width='.$width.'&height='.$height.'&small_header='.NumToTF($small_header).'&adapt_container_width='.NumToTF($adapt_container_width).'&hide_cover='.NumToTF($hide_cover).'&show_facepile='.NumToTF($show_facepile).'&appId" width="'.$width.'" height="'.$height.'" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>';
+    }
 }
 
 function okid($okid, $width, $height)

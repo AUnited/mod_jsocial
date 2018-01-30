@@ -26,6 +26,10 @@
 <config>
 	<fields name="params">
 		<fieldset name="basic">
+			<field name="tengine" type="radio" default="0" class="btn-group btn-group-yesno" label="MOD_JSOCIAL_VK_WIDE" description="MOD_JSOCIAL_VK_WIDE_DESC">
+				<option value="1">JQuery</option>
+				<option value="0">Mootools</option>
+			</field>
 			<field name="width" type="integer" first="0" last="2048" step="20" default="300" label="MOD_JSOCIAL_WIDTH" description="MOD_JSOCIAL_WIDTH_DESC" />
 			<field name="height" type="integer" first="0" last="2048" step="20" default="300" label="MOD_JSOCIAL_HEIGHT" description="MOD_JSOCIAL_HEIGHT_DESC" />
 		</fieldset>
@@ -53,6 +57,10 @@
 			<field name="okid" type="text" default="" label="MOD_JSOCIAL_OKID" description="MOD_JSOCIAL_OKID_DESC" />
 		</fieldset>
 		<fieldset name="MOD_JSOCIAL_FB">
+			<field name="fbmode" type="radio" default="1" class="btn-group btn-group-yesno" label="MOD_JSOCIAL_FB_MODE" description="MOD_JSOCIAL_FB_MODE_DESC">
+				<option value="1">JavaScript</option>
+				<option value="0">IFrame</option>
+			</field>
 			<field name="fbid" type="text" default="" label="MOD_JSOCIAL_FBID" description="MOD_JSOCIAL_FBID_DESC" />
 			<field name="fbtitle" type="text" default="" label="MOD_JSOCIAL_FB_TITLE" description="MOD_JSOCIAL_FB_TITLE_DESC" />
 			<field name="langd" type="radio" default="1" class="btn-group btn-group-yesno" label="MOD_JSOCIAL_FB_LANGD" description="MOD_JSOCIAL_FB_LANGD_DESC">
