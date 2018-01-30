@@ -46,25 +46,25 @@ if($tabengine){
 
     echo'</ul>';
     if ($vkid) {echo '<div id="tabs-1">' . vkinit() . vkid($vkid, $bodywidth, $bodyheight) . '</div>'; }
-    if ($vkid) {echo '<div id="tabs-2">' . okid($okid, $bodywidth, $bodyheight) . '</div>'; }
-    if ($vkid) {echo '<div id="tabs-3">' . fbinit() . fbid($fbid, $fbtitle, $bodywidth, $bodyheight) . '</div>'; }
-    if ($vkid) {echo '<div id="tabs-4">' . tinit() . tid($fbid, $bodywidth, $bodyheight) . '</div>'; }
+    if ($okid) {echo '<div id="tabs-2">' . okid($okid, $bodywidth, $bodyheight) . '</div>'; }
+    if ($fbid) {echo '<div id="tabs-3">' . fbinit() . fbid($fbid, $fbtitle, $bodywidth, $bodyheight) . '</div>'; }
+    if ($tid) {echo '<div id="tabs-4">' . tinit() . tid($fbid, $bodywidth, $bodyheight) . '</div>'; }
 echo '</div>';
 } else {
     echo '<script src="https://ajax.googleapis.com/ajax/libs/mootools/1.6.0/mootools.min.js"></script>
     <script type="application/javascript" src="modules/mod_jsocial/assests/mootabs.js"></script>
     <ul id = "tabs">';
     if ($vkid) {
-        echo '<li id = "VkM">VK.com</li>';
+        echo '<li id = "VkM"><img src="modules/mod_jsocial/assests/vk.svg" width="24" height="24"/></li>';
     }
     if ($okid) {
-        echo '<li id = "OkM">OK.ru</li>';
+        echo '<li id = "OkM"><img src="modules/mod_jsocial/assests/ok.svg" width="24" height="24"/></li>';
     }
     if ($fbid) {
-        echo '<li id = "FbM">Facebook</li>';
+        echo '<li id = "FbM"><img src="modules/mod_jsocial/assests/fb.svg" width="24" height="24"/></li>';
     }
     if ($tid) {
-        echo '<li id = "TwM">Twitter</li>';
+        echo '<li id = "TwM"><img src="modules/mod_jsocial/assests/twitter.svg" width="24" height="24"/></li>';
     }
     echo ' </ul>';
 
