@@ -19,7 +19,7 @@ $vkid   =   $moduleParams->get('vkid', '');
 $okid   =   $moduleParams->get('okid', '');
 $fbid   =   $moduleParams->get('fbid', '');
 $tid   =   $moduleParams->get('tid', '');
-$fbtext   =   $moduleParams->get('fbtext', 'Facebook');
+$fbtitle   =   $moduleParams->get('fbtitle', 'Facebook');
 $tabsheight=0;
 $bodywidth  =   $options['width'];
 $bodyheight =   $options['height'] - $tabsheight;
@@ -36,6 +36,6 @@ echo' </ul>';
 #and here are our content divs
 if($vkid)   { echo '<div id = "contentoneM" class = "hiddenM">'.vkinit().vkid($vkid, $bodywidth, $bodyheight).'</div>';}
 if($okid)   { echo '<div id = "contenttwoM" class = "hiddenM">'.okid($okid, $bodywidth, $bodyheight).'</div>';}
-if($fbid)   { echo '<div id = "contentthreeM" class = "hiddenM">'.fbinit().fbid($fbid,$fbtext, $bodywidth, $bodyheight).'</div>';}
+if($fbid)   { echo '<div id = "contentthreeM" class = "hiddenM">'.fbinit().fbid($fbid,$fbtitle, $bodywidth, $bodyheight).'</div>';}
 if($tid)    { echo '<div id = "contentfourM" class = "hiddenM">'.tinit().tid($fbid, $bodywidth, $bodyheight).'</div>';}
 
