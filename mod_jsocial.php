@@ -39,10 +39,10 @@ if($tabengine){
 <div id="tabs">
   <ul>';
     $count=0;
-    if ($vkid) {echo '<li><a href="#tabs-1">VK.com</a></li>'; }
-    if ($okid) {echo '<li><a href="#tabs-2">OK.ru</a></li>';}
-    if ($fbid) {echo '<li><a href="#tabs-3">Facebook</a></li>';}
-    if ($tid)  {echo '<li><a href="#tabs-4">Twitter</a></li>';}
+    if ($vkid) {echo '<li><a href="#tabs-1"><img src="modules/mod_jsocial/assests/vk.svg" width="24" height="24"/></a></li>'; }
+    if ($okid) {echo '<li><a href="#tabs-2"><img src="modules/mod_jsocial/assests/ok.svg" width="24" height="24"/></a></li>';}
+    if ($fbid) {echo '<li><a href="#tabs-3"><img src="modules/mod_jsocial/assests/fb.svg" width="24" height="24"/></a></li>';}
+    if ($tid)  {echo '<li><a href="#tabs-4"><img src="modules/mod_jsocial/assests/twitter.svg" width="24" height="24"/></a></li>';}
 
     echo'</ul>';
     if ($vkid) {echo '<div id="tabs-1">' . vkinit() . vkid($vkid, $bodywidth, $bodyheight) . '</div>'; }
